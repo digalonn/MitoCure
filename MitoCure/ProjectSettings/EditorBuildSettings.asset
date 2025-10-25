@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MitoCure/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/MitoCure/Scenes/Level1.unity
+    guid: c3550e3768795c6429ec612f1cbabddc
+  - enabled: 1
+    path: Assets/MitoCure/Scenes/Options.unity
+    guid: 884d83f101be50c4c8ad813d15226531
+  - enabled: 1
+    path: Assets/MitoCure/Scenes/Pazar.unity
+    guid: e018f2be7d612284ea018320a8cb9c4c
+  - enabled: 1
+    path: "Assets/MitoCure/Scenes/\xC7iftlik.unity"
+    guid: c22df3889af88034ea3dd3d28549ee95
   m_configObjects: {}

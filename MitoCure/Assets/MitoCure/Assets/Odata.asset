@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0bf30d4f43d5584480ac84edff2eb14, type: 3}
   m_Name: Odata
   m_EditorClassIdentifier: 
-  Odata: 
-  zamantohumu: 
-  bitkiPrefab: {fileID: 0}
-  zamantohumuPrefab: {fileID: 0}
+  tohumAdi: 
+  tohumIkonu: {fileID: 0}
+  bitkiPrefabi: {fileID: 0}
+  buyumeSuresiSaniye: 1
+  buyumeAsamalari:
+  - {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  hasatEdilenUrunPrefabi: {fileID: 0}
+  hasatMiktari: 1
