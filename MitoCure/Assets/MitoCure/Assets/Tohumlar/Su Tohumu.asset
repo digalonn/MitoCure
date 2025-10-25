@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0bf30d4f43d5584480ac84edff2eb14, type: 3}
-  m_Name: BereketTohumu
+  m_Name: Su Tohumu
   m_EditorClassIdentifier: 
-  gerekenSeviye: 2
-  tohumAdi: BereketTohumu
+  gerekenSeviye: 3
+  tohumAdi: SuTohumu
   tohumIkonu: {fileID: 0}
   bitkiPrefabi: {fileID: 0}
   buyumeSuresiSaniye: 10

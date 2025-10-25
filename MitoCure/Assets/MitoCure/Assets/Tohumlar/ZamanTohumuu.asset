@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0bf30d4f43d5584480ac84edff2eb14, type: 3}
   m_Name: ZamanTohumuu
   m_EditorClassIdentifier: 
+  gerekenSeviye: 5
   tohumAdi: ZamanTohumu
   tohumIkonu: {fileID: 0}
   bitkiPrefabi: {fileID: 0}

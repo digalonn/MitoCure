@@ -19,7 +19,7 @@ public class EnvanterManager : MonoBehaviour
         {
             instance = this;
             // (İsteğe bağlı) Sahne değişse bile envanterin korunması için
-            // DontDestroyOnLoad(this.gameObject); 
+             DontDestroyOnLoad(this.gameObject); 
         }
     }
     // --- Singleton Bitişi ---
