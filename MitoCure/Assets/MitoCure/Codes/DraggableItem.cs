@@ -26,6 +26,46 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // --- YENİ EKLENEN KISIM: SEVİYE KONTROLÜ ---
+        if (tohumData == null) 
+        {
+            Debug.LogError("BU SLOTTA TOHUM DATA ATANMAMIŞ! (None)");
+            eventData.pointerDrag = null; // Sürüklemeyi iptal et
+            return;
+        }
+
+        // --- KONTROL 2: Değerleri konsola yazdır ---
+        int oyuncuSeviyesi = SeviyeManager.instance.GetMevcutSeviye();
+        int gerekenSeviye = tohumData.gerekenSeviye;
+        
+        Debug.Log("SÜRÜKLEME BAŞLADI: Tohum: " + tohumData.tohumAdi + 
+                  " | Gereken Seviye: " + gerekenSeviye + 
+                  " | Oyuncu Seviyesi: " + oyuncuSeviyesi);
+        // --- DEBUG KODU BİTTİ ---
+        
+        // SeviyeManager'dan kontrol et
+        bool seviyeYeterli = SeviyeManager.instance.SeviyeYeterliMi(tohumData.gerekenSeviye);
+
+        if (!seviyeYeterli)
+        {
+            // --- KONTROL 3: İptal bloğuna giriyor mu? ---
+        Debug.LogWarning("SEVİYE YETERSİZ! Sürükleme iptal edildi.");
+        // --- DEBUG KODU BİTTİ ---
+        
+        eventData.pointerDrag = null;
+        
+            Debug.Log(tohumData.tohumAdi + " ekmek için gereken seviye: " 
+                                         + tohumData.gerekenSeviye + ". (Mevcut Seviye: " 
+                                         + SeviyeManager.instance.GetMevcutSeviye() + ")");
+            
+            // (İsteğe bağlı: Ekranda bir uyarı sesi çal veya mesaj göster)
+            // UyariManager.instance.Goster("Seviye Yetersiz!");
+            
+            // Sürüklemeyi tamamen iptal et.
+            eventData.pointerDrag = null;
+            return;
+        }
+        // --- SEVİYE KONTROLÜ BİTTİ ---
         // 1. Sürüklenen bir kopya ikon oluştur
         suruklenenIkon = new GameObject("DragIcon");
         suruklenenIkon.transform.SetParent(anaCanvas.transform, false); // Canvas'ın altına koy

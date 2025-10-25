@@ -7,7 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TohumData", menuName = "Envar/TohumData")]
 public class TohumData : ScriptableObject
 {
-    
+    public int gerekenSeviye = 1;
     public string tohumAdi;
     public Sprite tohumIkonu;
     public GameObject bitkiPrefabi; // Bu tohum ekildiğinde büyüyecek bitkinin prefabı

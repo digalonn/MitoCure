@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/MitoCure/Scenes/BackgroundStory.unity
     guid: d4a20cbc5bcd44943a1a2d745ec8306c
   - enabled: 1
-    path: Assets/MitoCure/Scenes/Level1.unity
+    path: Assets/MitoCure/Scenes/Level 1.unity
     guid: c3550e3768795c6429ec612f1cbabddc
+  - enabled: 1
+    path: Assets/MitoCure/Scenes/Level 2.unity
+    guid: d11fa3e9af868dd45b11e6f874131f42
   - enabled: 1
     path: Assets/MitoCure/Scenes/Options.unity
     guid: 884d83f101be50c4c8ad813d15226531
