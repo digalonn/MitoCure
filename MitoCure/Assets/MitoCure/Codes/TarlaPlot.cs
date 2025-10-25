@@ -115,19 +115,27 @@ public class TarlaPlot : MonoBehaviour
     // (Daha önce oluşturduğumuz) HasatEt fonksiyonunu güncelleyelim
     public void HasatEt()
     {
-        if (!ekiliMi || !olgunlastiMi) return; // Güvenlik kontrolü
+        if (!ekiliMi || !olgunlastiMi) return; 
 
-        Debug.Log(ekiliTohum.tohumAdi + " hasat edildi! Envantere " + ekiliTohum.hasatMiktari + " adet eklendi.");
-        
-        // --- TODO: Envanter Yönetimi ---
-        // Burada envanter sisteminize hasat edilen ürünü eklersiniz.
-        // Örnek:
-        // EnvanterManager.instance.ItemEkle(ekiliTohum.hasatEdilenUrunPrefabi, ekiliTohum.hasatMiktari);
+        // --- ENTEGRASYON KISMI ---
+        if (ekiliTohum.hasatEdilenUrunData != null)
+        {
+            // EnvanterManager'a ürünü ekle
+            EnvanterManager.instance.UrunEkle(
+                ekiliTohum.hasatEdilenUrunData, 
+                ekiliTohum.hasatMiktari
+            );
+        }
+        else
+        {
+            Debug.LogWarning(ekiliTohum.tohumAdi + " için 'Hasat Edilen Urun Data' atanmamış!");
+        }
+        // --- ENTEGRASYON BİTTİ ---
+
 
         // Tarlayı temizle
-        Destroy(ekiliBitkiObjesi); // Bitki objesini yok et
-        
-        // Coroutine çalışıyorsa (bir hata olduysa) durdur
+        Destroy(ekiliBitkiObjesi); 
+
         if (buyumeCoroutini != null)
         {
             StopCoroutine(buyumeCoroutini);
@@ -139,6 +147,6 @@ public class TarlaPlot : MonoBehaviour
         olgunlastiMi = false;
         ekiliTohum = null;
         bitkiSpriteRenderer = null;
-        spriteRenderer.sprite = surulmusToprakSprite; // Tarlayı boş (sürülmüş) hale getir
+        spriteRenderer.sprite = surulmusToprakSprite;
     }
 }

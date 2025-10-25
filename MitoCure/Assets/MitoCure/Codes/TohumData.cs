@@ -23,9 +23,9 @@ public class TohumData : ScriptableObject
     public Sprite[] buyumeAsamalari; 
 
     [Header("Hasat Bilgisi")]
-    public GameObject hasatEdilenUrunPrefabi; // Hasat edince envantere eklenecek ürün
+    public UrunData hasatEdilenUrunData; // <-- BU SATIRI EKLEYİN
     public int hasatMiktari = 1;
-
+    
 
    
 }

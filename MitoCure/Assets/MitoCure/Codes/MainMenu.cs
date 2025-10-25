@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public void play()
     {
         SceneManager.LoadScene("BackgroundStory");
+        
     }
 
     public void options()

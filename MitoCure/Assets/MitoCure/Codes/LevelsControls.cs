@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Buton için bu gerekli
 using UnityEngine.SceneManagement; // Sahne geçişi için bu gerekli
-using TMPro; // TextMeshPro için bu gerekli
+using TMPro;
 
-public class IntroController : MonoBehaviour
+public class LevelsControls : MonoBehaviour
 {
     [Header("UI Elemanları")]
     public TextMeshProUGUI storyTextComponent; // Yazıyı göstereceğimiz Text objesi
@@ -57,15 +59,9 @@ public class IntroController : MonoBehaviour
 
     private void LoadNextScene()
     {
-        // Butonu devre dışı bırak
+        // Butonu devre dışı bırak (kullanıcı sahneler yüklenirken tekrar tıklamasın)
         clickButton.interactable = false;
-    
-        // --- YENİ EKLENEN SATIR ---
-        // Yeni sahneyi yüklemeden önce, şu anki sahnenin (yani IntroScene) adını
-        // hafızaya alıyoruz.
-        SceneHistory.previousSceneName = SceneManager.GetActiveScene().name;
-        // --------------------------
-
+        
         // Belirtilen isimdeki sahneyi yükle
         SceneManager.LoadScene(sceneToLoad);
     }
