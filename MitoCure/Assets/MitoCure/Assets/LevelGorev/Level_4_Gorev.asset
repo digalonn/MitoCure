@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21fdf369a828ea3429ce3325fa039ab1, type: 3}
-  m_Name: Level_3_Gorev
+  m_Name: Level_4_Gorev
   m_EditorClassIdentifier: 
-  istenenUrun: {fileID: 11400000, guid: e41c7a15347c8114591252ce9636faf8, type: 2}
+  istenenUrun: {fileID: 11400000, guid: 601b310a800c95640838f153328b6fb4, type: 2}
   istenenMiktar: 1
   istekDiyaloglari: []
-  tesekkurDiyalogu: "Sa\u011Fol"
-  yanlisUrunDiyalogu: "\u0130stedi\u011Fim bu de\u011Fildi"
-  eksikUrunDiyalogu: bu eksik
+  tesekkurDiyalogu: "Te\u015Fekk\xFCrler"
+  yanlisUrunDiyalogu: "Bu de\u011Fil!"
+  eksikUrunDiyalogu: 
   tamamlanincaAcilacakSeviye: 4
   sonrakiSahneAdi: Level 4

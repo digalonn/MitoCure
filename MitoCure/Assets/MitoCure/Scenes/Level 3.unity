@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b449717640ab3e43b71eb14781528fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mevcutGorev: {fileID: 11400000, guid: bd562046bd60d1f4daeb8514ddafb237, type: 2}
+  mevcutGorev: {fileID: 11400000, guid: 53b39c58d59d65649b829d692684efa2, type: 2}
   diyalogSistemi: {fileID: 1212037217}
 --- !u!4 &2527352
 Transform:
@@ -1776,8 +1776,8 @@ MonoBehaviour:
   storyTextComponent: {fileID: 1145193345}
   clickButton: {fileID: 1107724146}
   storyLines:
-  - 2.bolum
-  sceneToLoad: Level 3
+  - level 3
+  sceneToLoad: Level 4
 --- !u!4 &1149199089
 Transform:
   m_ObjectHideFlags: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Level_2_Gorev
   m_EditorClassIdentifier: 
   istenenUrun: {fileID: 11400000, guid: 1995af42b9a6f414893c26d2deba7a49, type: 2}
-  istenenMiktar: 2
-  istekDiyaloglari: []
+  istenenMiktar: 1
+  istekDiyaloglari:
+  - .
   tesekkurDiyalogu: "sa\u011Fol"
   yanlisUrunDiyalogu: ne?
   eksikUrunDiyalogu: bunu istiyorum

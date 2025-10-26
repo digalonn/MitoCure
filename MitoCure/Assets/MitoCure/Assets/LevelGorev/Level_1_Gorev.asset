@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   istenenUrun: {fileID: 11400000, guid: 995d8d1cfebed254984367aa3d36b6df, type: 2}
   istenenMiktar: 1
-  istekDiyaloglari: []
+  istekDiyaloglari:
+  - .
   tesekkurDiyalogu: "Te\u015Fekk\xFCrler"
   yanlisUrunDiyalogu: "Sen beni kand\u0131r\u0131yor musun?"
   eksikUrunDiyalogu: "\u015Eunu istemi\u015Ftim."
