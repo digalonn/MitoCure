@@ -53,7 +53,7 @@ public class LevelsControls : MonoBehaviour
         else
         {
             // Cümleler bittiyse, ana oyun sahnesine geç
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level 1");
         }
     }
 

@@ -16,7 +16,7 @@ public class SeviyeManager : MonoBehaviour
         {
             instance = this;
             // (İsteğe bağlı) Seviye bilgisi sahneler arası korunmalı
-            // DontDestroyOnLoad(this.gameObject); 
+            DontDestroyOnLoad(this.gameObject); 
         }
     }
     // --- Singleton Bitişi ---

@@ -17,6 +17,7 @@ MonoBehaviour:
   tohumIkonu: {fileID: 0}
   bitkiPrefabi: {fileID: 0}
   buyumeSuresiSaniye: 10
-  buyumeAsamalari: []
-  hasatEdilenUrunData: {fileID: 0}
+  buyumeAsamalari:
+  - {fileID: 0}
+  hasatEdilenUrunData: {fileID: 11400000, guid: 1995af42b9a6f414893c26d2deba7a49, type: 2}
   hasatMiktari: 1

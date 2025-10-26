@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4cfedf88b61d5439a9722aed9efa65, type: 3}
-  m_Name: "G\xFCnAna"
+  m_Name: "YelkanKabu\u011Fu"
   m_EditorClassIdentifier: 
-  urunAdi: "G\xFCnAna"
-  urunIkonu: {fileID: 0}
+  urunAdi: "YelkanKabu\u011Fu"
+  urunIkonu: {fileID: 21300000, guid: 6ada24d80c0506143bd24d55b0f9e67b, type: 3}
   satisFiyati: 0

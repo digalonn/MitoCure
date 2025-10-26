@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab4cfedf88b61d5439a9722aed9efa65, type: 3}
-  m_Name: BozTengri
+  m_Script: {fileID: 11500000, guid: 21fdf369a828ea3429ce3325fa039ab1, type: 3}
+  m_Name: Level_3_Gorev
   m_EditorClassIdentifier: 
-  urunAdi: BozTengri
-  urunIkonu: {fileID: 0}
-  satisFiyati: 0
+  istenenUrun: {fileID: 0}
+  istenenMiktar: 0
+  istekDiyaloglari: []
+  tesekkurDiyalogu: 
+  yanlisUrunDiyalogu: 
+  eksikUrunDiyalogu: 
+  tamamlanincaAcilacakSeviye: 0
+  sonrakiSahneAdi: 

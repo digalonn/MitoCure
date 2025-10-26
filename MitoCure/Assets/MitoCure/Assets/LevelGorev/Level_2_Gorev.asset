@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fdf369a828ea3429ce3325fa039ab1, type: 3}
   m_Name: Level_2_Gorev
   m_EditorClassIdentifier: 
-  istenenUrun: {fileID: 0}
-  istenenMiktar: 0
+  istenenUrun: {fileID: 11400000, guid: 1995af42b9a6f414893c26d2deba7a49, type: 2}
+  istenenMiktar: 2
   istekDiyaloglari: []
   tesekkurDiyalogu: "sa\u011Fol"
   yanlisUrunDiyalogu: ne?

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4cfedf88b61d5439a9722aed9efa65, type: 3}
-  m_Name: YelAna
+  m_Name: AlazNuru
   m_EditorClassIdentifier: 
-  urunAdi: YelAna
+  urunAdi: AlazNuru
   urunIkonu: {fileID: 0}
   satisFiyati: 0
