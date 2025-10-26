@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: YulTunkari
   m_EditorClassIdentifier: 
   urunAdi: YulTunkari
-  urunIkonu: {fileID: 0}
+  urunIkonu: {fileID: 21300000, guid: 09f593e0f193faf468c2e49b1bff5f12, type: 3}
   satisFiyati: 0

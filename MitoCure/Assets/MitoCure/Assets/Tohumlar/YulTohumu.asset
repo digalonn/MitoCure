@@ -18,6 +18,6 @@ MonoBehaviour:
   bitkiPrefabi: {fileID: 0}
   buyumeSuresiSaniye: 10
   buyumeAsamalari:
-  - {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
+  - {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
   hasatEdilenUrunData: {fileID: 11400000, guid: e41c7a15347c8114591252ce9636faf8, type: 2}
   hasatMiktari: 1

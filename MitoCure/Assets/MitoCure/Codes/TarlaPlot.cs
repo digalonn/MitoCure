@@ -3,51 +3,64 @@ using System.Collections; // Coroutine için bu kütüphane gerekli
 
 public class TarlaPlot : MonoBehaviour
 {
-    public bool ekiliMi = false;
+    [Header("Tarla Sprite'ları")]
+    public Sprite surulmemisToprakSprite; // Yabani otlu, ham toprak (Başlangıç)
+    public Sprite ekilmisToprakSprite;    // İçinde tohum varken (Büyüme aşaması)
+    public Sprite surulmusToprakSprite;   // Hasattan sonra (Ekime hazır)
+
+    [Header("Durum Değişkenleri")]
+    private SpriteRenderer spriteRenderer;
+    private bool ekiliMi = false;
+    private bool olgunlastiMi = false;
+
+    // Diğer script'lerden (TohumData) gelen bilgiler
     private TohumData ekiliTohum;
     private GameObject ekiliBitkiObjesi;
-
-    // Sprite'ı değiştirmek için
-    private SpriteRenderer spriteRenderer; 
-    public Sprite surulmusToprakSprite; 
-    public Sprite ekilmisToprakSprite; 
-
-    // --- YENİ EKLENEN KISIM ---
-    private SpriteRenderer bitkiSpriteRenderer; // Ekilen bitkinin sprite'ını değiştirmek için
+    private SpriteRenderer bitkiSpriteRenderer; // Bitkinin kendi sprite'ı
     private Coroutine buyumeCoroutini;
-    private bool olgunlastiMi = false;
+    
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = surulmusToprakSprite;
+
+        // Oyun başladığında tarla "sürülmemiş" ham toprak olarak başlar.
+        ekiliMi = false;
+        olgunlastiMi = false;
+        spriteRenderer.sprite = surulmemisToprakSprite;
     }
 
-    // DraggableItem script'inden çağrılacak fonksiyon
+    /// <summary>
+    /// DraggableItem script'inden (tohumu sürüklediğimizde) çağrılır.
+    /// Tarlayı otomatik olarak eker.
+    /// </summary>
     public bool TohumEk(TohumData ekilecekTohum)
     {
+        // 1. Tarlada zaten ekili bir şey varsa, ekime izin verme
         if (ekiliMi)
         {
             Debug.Log("Bu tarla zaten ekili!");
             return false;
         }
 
-        // Tarla boş, ekim yap
+        // 2. Tarla boş (sürülmüş veya sürülmemiş olması fark etmez).
+        // Tıklamaya gerek kalmadan, sürükleme işlemi tarlayı "ekili" hale getirir.
+        
         ekiliMi = true;
-        olgunlastiMi = false; // Yeni ekildi, olgun değil
+        olgunlastiMi = false;
         ekiliTohum = ekilecekTohum;
 
+        // Tarlanın zemin görüntüsünü "ekilmiş" olarak ayarla
         if (ekilmisToprakSprite != null)
         {
             spriteRenderer.sprite = ekilmisToprakSprite;
         }
 
+        // Bitki objesini oluştur ve SpriteRenderer'ını al
         if (ekilecekTohum.bitkiPrefabi != null)
         {
             ekiliBitkiObjesi = Instantiate(ekilecekTohum.bitkiPrefabi, transform.position, Quaternion.identity);
             ekiliBitkiObjesi.transform.SetParent(this.transform);
-            
-            // Bitkinin SpriteRenderer'ını al
             bitkiSpriteRenderer = ekiliBitkiObjesi.GetComponent<SpriteRenderer>();
         }
 
@@ -59,18 +72,20 @@ public class TarlaPlot : MonoBehaviour
         return true; 
     }
 
-    // --- YENİ FONKSİYON: BÜYÜME SÜRECİ (COROUTINE) ---
+    /// <summary>
+    /// Bitkinin büyüme aşamalarını yönetir.
+    /// "Hasata hazır" hal, bitkinin son büyüme sprite'ıdır.
+    /// </summary>
     private IEnumerator BuyumeSureci()
     {
-        // Tohum datasında büyüme aşaması var mı kontrol et
+        // TohumData (ScriptableObject) içinde "Buyume Asamalari" dizisi ayarlı mı?
         if (ekiliTohum.buyumeAsamalari == null || ekiliTohum.buyumeAsamalari.Length == 0)
         {
-            Debug.LogError(ekiliTohum.tohumAdi + " için büyüme aşaması sprite'ı atanmamış!");
+            Debug.LogError(ekiliTohum.tohumAdi + " için 'Buyume Asamalari' sprite dizisi atanmamış! Lütfen TohumData dosyasını kontrol edin.");
             yield break; // Coroutine'i durdur
         }
 
         int asamaSayisi = ekiliTohum.buyumeAsamalari.Length;
-        // Her aşama ne kadar sürecek?
         float surePerAsama = ekiliTohum.buyumeSuresiSaniye / (float)asamaSayisi;
 
         for (int i = 0; i < asamaSayisi; i++)
@@ -87,66 +102,73 @@ public class TarlaPlot : MonoBehaviour
 
         // Büyüme tamamlandı
         olgunlastiMi = true;
-        buyumeCoroutini = null; // Coroutine bitti
+        buyumeCoroutini = null;
+
+        // "Hasata hazır" hal, bitkinin aldığı son sprite halidir.
+        // (ekiliTohum.buyumeAsamalari dizisindeki son eleman)
         Debug.Log(ekiliTohum.tohumAdi + " olgunlaştı, hasat edilebilir!");
     }
 
-    // --- YENİ FONKSİYON: TIKLAYARAK HASAT ETME ---
-    // Bu fonksiyonun çalışması için Tarla objesinde bir Collider2D (Box Collider 2D) olmalıdır!
-    // (Zaten sürükle-bırak için eklemiştik)
+    /// <summary>
+    /// Tarlaya tıklandığında çalışır.
+    /// Artık SADECE hasat etmek için kullanılır.
+    /// </summary>
     private void OnMouseDown()
     {
+        // 1. ÖNCELİK: Hasat
         // Eğer tarla ekili VE bitki olgunlaşmışsa
         if (ekiliMi && olgunlastiMi)
         {
             HasatEt();
+            return; // İşlemi bitir
         }
-        else if (ekiliMi && !olgunlastiMi)
+
+        // 2. Diğer Durumlar (Sadece bilgi verme)
+        if (ekiliMi && !olgunlastiMi)
         {
             Debug.Log("Bitki henüz büyümedi!");
         }
-        else
+        else if (!ekiliMi)
         {
-            Debug.Log("Tarlada ekili bir şey yok.");
+            // Tarla ya "sürülmemiş" ya da "sürülmüş" (boş) haldedir
+            Debug.Log("Bu tarlaya ekim yapmak için bir tohum sürükleyin.");
         }
     }
 
-
-    // (Daha önce oluşturduğumuz) HasatEt fonksiyonunu güncelleyelim
+    /// <summary>
+    /// Bitkiyi hasat eder ve tarlayı "ekime hazır" (sürülmüş) hale döndürür.
+    /// </summary>
     public void HasatEt()
     {
-        if (!ekiliMi || !olgunlastiMi) return; 
+        if (!ekiliMi || !olgunlastiMi) return; // Güvenlik kontrolü
 
-        // --- ENTEGRASYON KISMI ---
+        // Envantere ürünü ekle
         if (ekiliTohum.hasatEdilenUrunData != null)
         {
-            // EnvanterManager'a ürünü ekle
             EnvanterManager.instance.UrunEkle(
                 ekiliTohum.hasatEdilenUrunData, 
                 ekiliTohum.hasatMiktari
             );
         }
-        else
-        {
-            Debug.LogWarning(ekiliTohum.tohumAdi + " için 'Hasat Edilen Urun Data' atanmamış!");
-        }
-        // --- ENTEGRASYON BİTTİ ---
-
-
-        // Tarlayı temizle
+        
+        // Bitki objesini yok et
         Destroy(ekiliBitkiObjesi); 
 
+        // Coroutine çalışıyorsa durdur
         if (buyumeCoroutini != null)
         {
             StopCoroutine(buyumeCoroutini);
             buyumeCoroutini = null;
         }
 
-        // Tarla durumunu sıfırla
+        // --- TARLA SIFIRLAMA ---
+        // Tarlayı temizle, durumu "Sürülmüş" (Ekime Hazır) olarak ayarla
         ekiliMi = false;
         olgunlastiMi = false;
         ekiliTohum = null;
         bitkiSpriteRenderer = null;
-        spriteRenderer.sprite = surulmusToprakSprite;
+
+        // Tarlayı "sürülmüş" (ekime hazır) sprite'a döndür
+        spriteRenderer.sprite = surulmusToprakSprite; 
     }
 }

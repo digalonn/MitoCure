@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 437762185}
   - component: {fileID: 437762184}
   m_Layer: 5
-  m_Name: UrunIconu
+  m_Name: UrunIconu2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1645,7 +1645,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 441.1, y: 157.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145193345
 MonoBehaviour:
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1694,8 +1694,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1773,10 +1773,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e614065e91800cd47aa4271e69ae37de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyTextComponent: {fileID: 0}
-  clickButton: {fileID: 0}
+  storyTextComponent: {fileID: 1145193345}
+  clickButton: {fileID: 1107724146}
   storyLines:
-  - sfsdfagga
+  - "G\xFCn Ana, Tengiri'yi ziyarete gelir."
+  - "Koya\u015F'\u0131n elindeki g\xFC\xE7 \xE7ok fazlad\u0131r ve insan \u0131rk\u0131
+    taraf\u0131ndan olduk\xE7a fazla sevilen ve sayg\u0131yla an\u0131lan bir tanr\u0131d\u0131r,
+    G\xFCn Ana ise Koya\u015F'a k\u0131yasla daha g\xFC\xE7s\xFCz ve insan \u0131rk\u0131
+    taraf\u0131ndan daha az sevilen bir tanr\u0131d\u0131r. G\xFCn Ana'n\u0131n kibrini
+    artt\u0131ran bu durum, G\xFCn Ana'y\u0131 Tengiri'ye iter. Koya\u015F'\u0131
+    zay\u0131f d\xFC\u015F\xFCrmeyi ama\xE7layan G\xFCn Ana, Tengiri den K\u0131r\u0131k
+    bir bereket tohumu ister."
+  - "Koya\u015F, yer ve g\xF6k tanr\u0131lar\u0131n\u0131n o\u011Flu olan g\xFCne\u015F
+    tanr\u0131s\u0131d\u0131r. Koya'\u0131 alt edebilecek g\xFC\xE7, yerlerin ve
+    g\xF6klerin bereketini tersine \xE7evirip, Koya\u015F'\u0131n g\xFCne\u015F \xFCzerindeki
+    hakimiyetini d\xFC\u015F\xFCrecek olan \xFCr\xFCn k\u0131r\u0131k bereket tohumudur."
+  - "k\u0131r\u0131k bereket ta\u015F\u0131, bereket tohumunun tersine i\u015Fler.
+    G\xFCc\xFC kullan\u0131lan ki\u015Fiye bereket vermek yerine, onun i\xE7indeki
+    bereketi emip bitirmektir."
+  - "G\xFCn Ana, Tengiri ile konu\u015Fur: \"Siz insanlar, neden beni bu kadar h\u0131zl\u0131
+    terk ettiniz? Sizlere yetemedim mi? Ellerinizin alt\u0131nda her zaman g\xFCne\u015F
+    bereketiyle durdum ve sizleri kollad\u0131m, sizlere \u015Fifa oldum. Sizlerin
+    hayvanlar, topraklar ve bitkilerle aran\u0131zdaki ba\u011F oldum, Bunlar\u0131n
+    hepsi gen\xE7 bir ve kapsaml\u0131 bir tanr\u0131y\u0131 bana tercih etmeniz
+    i\xE7in miydi?\"."
+  - Tengiri tepki vermez.
+  - "G\xFCn Ana konu\u015Fur: \"Bana bir \xFCr\xFCn ver insano\u011Flu, Koya\u015F'\u0131n
+    b\xFCt\xFCn bereketini emip, onun i\xE7inde yer ve g\xF6klerin bereketini yok
+    edebilecek bir malzeme olsun. Kar\u015F\u0131l\u0131\u011F\u0131nda, sana g\xFCne\u015Fin
+    \u015Fiddetli ate\u015Fini i\xE7inde bar\u0131ndan 10 tohum verece\u011Fim.\""
   sceneToLoad: Level 2
 --- !u!4 &1149199089
 Transform:

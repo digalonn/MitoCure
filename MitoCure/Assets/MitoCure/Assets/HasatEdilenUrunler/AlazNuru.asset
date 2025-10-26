@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AlazNuru
   m_EditorClassIdentifier: 
   urunAdi: AlazNuru
-  urunIkonu: {fileID: 0}
+  urunIkonu: {fileID: 21300000, guid: 20596f6ab92891040a3b9f4294441654, type: 3}
   satisFiyati: 0

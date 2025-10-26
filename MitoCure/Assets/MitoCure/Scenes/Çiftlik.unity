@@ -483,9 +483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b961823c9ecf124fa551d43c76b9773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ekiliMi: 0
+  surulmemisToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
+  ekilmisToprakSprite: {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
   surulmusToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
-  ekilmisToprakSprite: {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
 --- !u!61 &295137524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -762,9 +762,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b961823c9ecf124fa551d43c76b9773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ekiliMi: 0
+  surulmemisToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
+  ekilmisToprakSprite: {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
   surulmusToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
-  ekilmisToprakSprite: {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
 --- !u!61 &411391744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1467,9 +1467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b961823c9ecf124fa551d43c76b9773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ekiliMi: 0
+  surulmemisToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
+  ekilmisToprakSprite: {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
   surulmusToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
-  ekilmisToprakSprite: {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
 --- !u!61 &825846805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2055,9 +2055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b961823c9ecf124fa551d43c76b9773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ekiliMi: 0
+  surulmemisToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
+  ekilmisToprakSprite: {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
   surulmusToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
-  ekilmisToprakSprite: {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
 --- !u!61 &1315355225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2281,9 +2281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b961823c9ecf124fa551d43c76b9773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ekiliMi: 0
+  surulmemisToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
+  ekilmisToprakSprite: {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
   surulmusToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
-  ekilmisToprakSprite: {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
 --- !u!61 &1777433909
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2427,9 +2427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b961823c9ecf124fa551d43c76b9773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ekiliMi: 0
+  surulmemisToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
+  ekilmisToprakSprite: {fileID: 21300000, guid: 6036a4a7459d0a942b397a5c7ee264db, type: 3}
   surulmusToprakSprite: {fileID: 21300000, guid: 5c1248be9730e5a429fdad96a91ac41a, type: 3}
-  ekilmisToprakSprite: {fileID: 21300000, guid: a87ae79ef8594ce4ab664f1586baa319, type: 3}
 --- !u!61 &1807015721
 BoxCollider2D:
   m_ObjectHideFlags: 0

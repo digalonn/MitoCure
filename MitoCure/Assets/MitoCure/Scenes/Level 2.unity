@@ -1773,10 +1773,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e614065e91800cd47aa4271e69ae37de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyTextComponent: {fileID: 0}
-  clickButton: {fileID: 0}
+  storyTextComponent: {fileID: 1145193345}
+  clickButton: {fileID: 1107724146}
   storyLines:
-  - sfsdfagga
+  - 
   sceneToLoad: Level 3
 --- !u!4 &1149199089
 Transform:
